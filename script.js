@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // OpenRouter API key and endpoint
     const API_ENDPOINT = 'https://openrouter.ai/api/v1/chat/completions';
     // You'll need to replace this with your actual API key
-    const API_KEY = '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';
+    const API_KEY = '';
     
     // Model information
     const modelInfo = {
