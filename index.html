@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOKUL AI Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <i class="fas fa-robot"></i>
+                    <h1>GOKUL AI Assistant</h1>
+                </div>
+                <div class="model-selector">
+                    <label for="model-select">Model:</label>
+                    <div class="select-wrapper">
+                        <select id="model-select">
+                            <option value="qwen/qwen-2.5-coder-32b-instruct:free">Qwen 2.5 Coder</option>
+                            <option value="deepseek/deepseek-r1:free">DeepSeek R1</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    <div class="message-content">
+                        <p>Hello! I'm your AI assistant. You can select a model from the dropdown menu above. How can I help you today?</p>
+                    </div>
+                </div>
+                <div class="message bot">
+                    <div class="message-content model-info-message">
+                        <div class="model-info-content">
+                            <p><strong>Current model:</strong> Qwen 2.5 Coder</p>
+                            <p><i class="fas fa-info-circle"></i> Specialized for coding tasks and technical discussions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <textarea id="user-input" placeholder="Type your message..." rows="1"></textarea>
+                <button id="send-button" class="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
